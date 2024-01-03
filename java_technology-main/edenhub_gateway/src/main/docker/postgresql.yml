@@ -1,0 +1,11 @@
+version: '2'
+services:
+  edenhub_gateway-postgresql:
+    image: postgres:12.1
+    # volumes:
+    #     - ~/volumes/jhipster/edenhub_gateway/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=edenhub_gateway
+      - POSTGRES_PASSWORD=
+    ports:
+      - 5432:5432

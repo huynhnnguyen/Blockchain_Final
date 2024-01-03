@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.edenhub.gateway"
+    },
+    "jhipsterVersion": "6.8.0",
+    "applicationType": "gateway",
+    "baseName": "edenhub_gateway",
+    "packageName": "com.edenhub.gateway",
+    "packageFolder": "com/edenhub/gateway",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "redis",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NGY1MTBhNGNhNDZmMjA5ZjhlODljZTExYmU5MGJlMjVhMWE4NWJhMzM0MTY3YmE0MTA4YmYxNjg4NDk5Zjg4Y2JjNjE0NjQxZTNmZDY5YjkwYmMzMTEzOTk0MTQ4Njg0MDAzNzNkNTY0MzkyMDE2NmVjNjRkZjZkMDU1MWE0NWE=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "react",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "creationTimestamp": 1594634750641,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
