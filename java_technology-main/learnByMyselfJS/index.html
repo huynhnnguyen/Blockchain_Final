@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        /* ... (the rest of your CSS) ... */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p id="error-message" class="error"></p>
+    </div>
+    <script>
+        // JavaScript code here
+        document.addEventListener('DOMContentLoaded', function () {
+            const loginForm = document.getElementById('login-form');
+            const errorMessage = document.getElementById('error-message');
+
+            loginForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+                // Replace with your API endpoint for authentication
+                const apiUrl = 'http://localhost:8099/api/v1/consumer/authenticate';
+
+                // Make a POST request to the API
+                fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ username, password }),
+                })
+                    .then((response) => {
+                        if (response.ok) {
+                            // Authentication successful, redirect or perform actions
+                            window.location.href = 'dashboard.html';
+                        } else {
+                            // Authentication failed, display an error message
+                            errorMessage.textContent = 'Invalid credentials. Please try again.';
+                        }
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                        errorMessage.textContent = 'An error occurred. Please try again later.';
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
